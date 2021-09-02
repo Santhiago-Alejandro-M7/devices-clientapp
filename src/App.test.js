@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('Test to get list devices', async() => {
+test('Get all data from the API.', async() => {
   const api_call = await fetch('http://localhost:3000/devices');
     const data = await api_call.json();
     var res = [];
@@ -11,13 +11,13 @@ test('Test to get list devices', async() => {
 });
 
 
-test('Get device with id', async() => {
+test('Get devices by ID ', async() => {
   const api_call = await fetch('http://localhost:3000/devices/e8okoP2l5');
     const data = await api_call.json();
     expect(data).not.toBeNull();
 });
 
-test('Create device', async() => {
+test('Add a new device', async() => {
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -31,7 +31,7 @@ const data = await api_call.json();
 expect(data).not.toBeNull();
 });
 
-test('Update device', async() => {
+test('Update information of device', async() => {
   const requestOptions = {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
