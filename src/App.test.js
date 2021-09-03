@@ -21,8 +21,8 @@ test('Add a new device', async() => {
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ system_name: "my-mac", 
-    type: "MAC-MINI", 
+    body: JSON.stringify({ system_name: "User-Windows", 
+    type: "WINDOWS_SERVER", 
     hdd_capacity: "64" })
 };
 
@@ -35,7 +35,7 @@ test('Update information of device', async() => {
   const requestOptions = {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ system_name: "MIMAC", 
+    body: JSON.stringify({ system_name: "User-Mac", 
     type: "MAC", 
     hdd_capacity: "64" })
 };

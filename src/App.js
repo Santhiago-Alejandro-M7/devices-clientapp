@@ -228,8 +228,7 @@ function App() {
 
       <TextField name="type" className={styles.inputMaterial} label="Type" onChange={handleChange} value={deviceSelected && deviceSelected.type} />
       <br />
-      <TextField name="hdd_capacity" type="number" className={styles.inputMaterial} label="HDD Capacity" onChange={handleChange} value={deviceSelected && deviceSelected.hdd_capacity} />
-      <br /> <br />
+      <TextField name="hdd_capacity" type="number" className={styles.inputMaterial} label="HDD Capacity        (Only numbers is accepted)" onChange={handleChange} value={deviceSelected && deviceSelected.hdd_capacity} />
 
       <div align="right">
         <button className="btn btn-primary" color="primary" onClick={() => peticionPut()}>Update Device</button>
